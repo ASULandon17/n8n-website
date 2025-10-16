@@ -1,12 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+/* Custom styles */
 @layer base {
-  * {
-    @apply border-gray-800;
-  }
-  
   body {
     @apply bg-black text-white;
   }
@@ -14,7 +9,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent;
   }
   
   .glow-green {
@@ -48,4 +43,27 @@
 ::selection {
   background-color: rgba(5, 150, 105, 0.3);
   color: white;
+}
+
+/* Animation utilities */
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.bg-size-200 {
+  background-size: 200% 200%;
 }

@@ -4,6 +4,7 @@ import './globals.css'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import { SITE_CONFIG } from '@/lib/constants'
+import Analytics from '@/components/Analytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -59,6 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-black text-white antialiased`}>
+        <Analytics />
         <Navigation />
         <main className="min-h-screen pt-20">
           {children}
